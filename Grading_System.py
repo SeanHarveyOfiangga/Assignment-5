@@ -13,6 +13,11 @@ def Grade_percentage():
     if Percentage >= 97 and Percentage <=100:
         print ("Grade/Mark: 1.0")
         print ("Description: Excellent")
+    # step 2 - 1.25 | Excellent
+    elif Percentage >= 94 and Percentage <=96:
+        print ("Grade/Mark: 1.25")
+        print ("Description: Excellent")
     else:
         print ("Others")
+        
 Equivalent = Grade_percentage()
