@@ -19,7 +19,7 @@ def round_half_up(n, decimals=0):
 
 greetings()
 
-#Grade percentage
+#Grade input validation
 def Grade_percentage():
     while True:
         try:
