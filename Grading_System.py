@@ -6,18 +6,20 @@
 #Grade/Mark: 1.75
 #Description: Very Good
 
+import math
+
+def greetings():
+    print ("Welcome to PUP Grading System Evaluator!")
+
+def round_half_up(n, decimals=0):
+    multiplier = 10 ** decimals
+    return math.floor(n*multiplier + 0.5) / multiplier    
+
 #Grade percentage
 def Grade_percentage():
     Percentage = float(input("Enter your grade percentage here: "))
-    # step 1 - 1.0 | Excellent 
-    if Percentage >= 97 and Percentage <=100:
-        print ("Grade/Mark: 1.0")
-        print ("Description: Excellent")
-    # step 2 - 1.25 | Excellent
-    elif Percentage >= 94 and Percentage <=96:
-        print ("Grade/Mark: 1.25")
-        print ("Description: Excellent")
-    else:
-        print ("Others")
+    Whole_Percentage = round_half_up(Percentage)
+    print (Whole_Percentage)
         
-Equivalent = Grade_percentage()
+greetings()
+Grade_percentage()
