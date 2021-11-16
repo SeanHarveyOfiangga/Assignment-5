@@ -41,10 +41,18 @@ def Grades():
     if Whole_Percentage >= 97 and Whole_Percentage <=100:
         print ("Grade/Mark: 1.0")
         print ("Description: Excellent")
-    # step 2 - 1.25 | Excellent
+    # Step 2 - 1.25 | Excellent
     elif Whole_Percentage >= 94 and Whole_Percentage <=96:
         print ("Grade/Mark: 1.25")
         print ("Description: Excellent")
+    # Step 3 - 1.5 | Very good
+    elif Whole_Percentage >= 91 and Whole_Percentage <=93:
+        print ("Grade/Mark: 1.5")
+        print ("Description: Very good")
+    # Step 4 - 1.75 | Very good
+    elif Whole_Percentage >= 88 and Whole_Percentage <=90:
+        print ("Grade/Mark: 1.75")
+        print ("Description: Very good")
     else:
         print ("Others")
         
