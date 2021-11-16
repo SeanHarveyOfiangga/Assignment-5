@@ -10,9 +10,9 @@
 def Grade_percentage():
     Percentage = float(input("Enter your grade percentage here: "))
     # step 1 - 1.0 | Excellent 
-    if Percentage >= 97 or Percentage <=100:
+    if Percentage >= 97 and Percentage <=100:
         print ("Grade/Mark: 1.0")
         print ("Description: Excellent")
     else:
         print ("Others")
-
+Equivalent = Grade_percentage()
