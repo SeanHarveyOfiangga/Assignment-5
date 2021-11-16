@@ -65,6 +65,10 @@ def Grades():
     elif Whole_Percentage >= 79 and Whole_Percentage <=81:
         print ("Grade/Mark: 2.5")
         print ("Description: Satisfactory")
+    # Step 8 - 2.75 | Satisfactory
+    elif Whole_Percentage >= 76 and Whole_Percentage <=78:
+        print ("Grade/Mark: 2.75")
+        print ("Description: Satisfactory")
     else:
         print ("Others")
         
