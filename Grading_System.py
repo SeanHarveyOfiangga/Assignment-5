@@ -19,6 +19,21 @@ def round_half_up(n, decimals=0):
 
 greetings()
 
+#Marks or Grades?
+def other_marks():
+    Choice = input("Press 'M' if you want to check for marks and Press 'G' if you want to check for Grades: ")
+    if Choice == "M":
+        Marks = input("Enter your mark: ")
+        if Marks == "W":
+            print ("Mark: Withdrawn")
+        elif Marks == "Inc":
+            print ("Mark: Incomplete")
+        elif Marks == "D":
+            print ("Mark: Dropped")
+    elif Choice == "G":
+        return
+other_marks()
+        
 #Grade input validation
 def Grade_percentage():
     while True:
@@ -77,7 +92,5 @@ def Grades():
     elif Whole_Percentage >= 65 and Whole_Percentage <=74:
         print ("Grade/Mark: 5.0")
         print ("Description: Failure")
-    else:
-        print ("Others")
         
 Grades()
