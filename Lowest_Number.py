@@ -5,8 +5,15 @@
 
 #Step 1 - Ask for 3 Numbers
 def Numbers():
-    First = float(input("Enter your first number: "))
-    Second = float(input("Enter your second number: "))
-    Third = float(input("Enter your third number: "))
-    print (f"You picked {First}, {Second}, {Third}.")
+    while True:
+        try:
+            First = float(input("Enter your first number: "))
+            Second = float(input("Enter your second number: "))
+            Third = float(input("Enter your third number: "))
+        except ValueError:
+            print ("Please enter numbers only.")
+            continue
+        else:
+            break
+    
 Numbers()
