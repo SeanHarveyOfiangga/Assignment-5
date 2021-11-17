@@ -10,7 +10,7 @@ import math
 
 #Introduction
 def greetings():
-    print ("Welcome to PUP Grading System Evaluator!")
+    print ("\nWelcome to PUP Grading System Evaluator!\n")
 
 #Rouding function
 def round_half_up(n, decimals=0):
@@ -21,18 +21,28 @@ greetings()
 
 #Marks or Grades?
 def other_marks():
-    Choice = input("Press 'M' if you want to check for marks and Press 'G' if you want to check for Grades: ")
-    if Choice == "M":
-        Marks = input("Enter your mark: ")
-        if Marks == "W":
-            print ("Mark: Withdrawn")
-        elif Marks == "Inc":
-            print ("Mark: Incomplete")
-        elif Marks == "D":
-            print ("Mark: Dropped")
-    elif Choice == "G":
-        return
-other_marks()
+    while True:
+        Choice = input("Press 'G' if you want to check for Grades and Press 'M' if you want to check for Marks: ")
+        if Choice == "M":
+            Marks = input("Enter your mark (Inc, W, D): ")
+            if Marks == "W":
+                print ("\nMark: Withdrawn")
+                print ("\nThank you for using PUP Grading System Evaluator!")
+                (exit)
+            elif Marks == "Inc":
+                print ("\nMark: Incomplete")
+                print ("\nThank you for using PUP Grading System Evaluator!")
+                exit()
+            elif Marks == "D":
+                print ("\nMark: Dropped")
+                print ("\nThank you for using PUP Grading System Evaluator!")
+                exit()
+        elif Choice == "G":
+            return
+        else:
+            print ("Invalid input, please choose 'M' and 'G' only.")
+            continue
+other_marks()  
         
 #Grade input validation
 def Grade_percentage():
@@ -47,11 +57,14 @@ def Grade_percentage():
             continue
         else:
             return Percentage
+
 Valid_Grade = Grade_percentage()
+
 
 #Grading system:
 def Grades():
     Whole_Percentage = round_half_up(Valid_Grade)
+    print (f"\nYour rounded grade is: {Whole_Percentage}")
     # Step 1 - 1.0 | Excellent
     if Whole_Percentage >= 97 and Whole_Percentage <=100:
         print ("Grade/Mark: 1.0")
@@ -92,5 +105,10 @@ def Grades():
     elif Whole_Percentage >= 65 and Whole_Percentage <=74:
         print ("Grade/Mark: 5.0")
         print ("Description: Failure")
-        
+
 Grades()
+
+#Outro 
+def Outro():
+    print ("\nThank you for using PUP Grading System Evaluator!")
+Outro()
