@@ -15,6 +15,8 @@ def Age():
         print ("You're a kid.")
     elif Age >= 13 and Age <= 17:
         print ("You're a teen.")
+    elif Age == 18:
+        print ("You're debut.")
     else:
         print ("Others.")
 
