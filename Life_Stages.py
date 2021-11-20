@@ -11,6 +11,9 @@
 
 def Age():
     Age = int(input("Please enter your age: "))
-    print (Age)
+    if Age >= 0 and Age <= 12:
+        print ("You're a kid.")
+    else:
+        print ("Others.")
 
 Age()
